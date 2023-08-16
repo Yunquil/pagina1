@@ -23,7 +23,7 @@
     </div>
 
     <div class="contenedor">
-      <h1>Tienda virtual de ciclismo</h1>
+      <h1>catologo deportivo para ciclistas</h1>
       <div class="box-contaier">
         <div v-for="(producto, index) in listaProductos" :key="index" class="box">
           <div class="imagen">
@@ -68,32 +68,32 @@ export default {
           imagenSrc:
             "https://spirobicycles.com/cdn/shop/products/FredoomLtwoo11Velocidades_4_39c777fb-68a8-4c21-9819-c1818878319e.jpg?v=1681935457",
           estrellas: [1, 2, 3, 4],
-          nombre: "bicicleta",
-          descripcion: "despues coloco",
+          nombre: "Bicicleta de Ruta Freedom",
+          descripcion: "bicicleta de ruta diseñada para aquellos ciclistas que quieren empezar a enfrentar más retos, ya sea bajar tiempos, hacer montadas más largas, o pasar del ciclismo todoterreno (MTB) a la ruta.",
           precio: "$5.000.000",
         },
         {
           imagenSrc:
             "https://www.ciclismoafondo.es/uploads/s1/12/20/44/1/5c7d4b950de6941e51349429-casco-specialized-s-works-evade-w-angi-prueba.jpeg",
           estrellas: [1, 2, 3],
-          nombre: "Producto 2",
-          descripcion: "Descripción del Producto 2",
+          nombre: "Casco Specialized S-Works Evade W/ ANGI",
+          descripcion: "Incluye dos nuevos elementos de seguridad: el innovador ANGI -que detecta cuando sufrimos una caída avisando a nuestros contactos-, y el sistema MIPS que reduce la componente rotacional de las fuerzas que nuestra cabeza recibe cuando sufrimos un impacto.",
           precio: "$1.000.000",
         },
         {
           imagenSrc:
             "https://exitocol.vtexassets.com/arquivos/ids/724406-800-auto?v=637042878212430000&width=800&height=auto&aspect=true",
           estrellas: [1, 2, 3, 4],
-          nombre: "Producto 3",
-          descripcion: "Descripción del Producto 3",
+          nombre: "Medias Safari",
+          descripcion: "Ecuentra comodidad y un buen ajustamiento",
           precio: "$20.000",
         },
         {
           imagenSrc:
             "https://http2.mlstatic.com/D_NQ_NP_775657-MCO69546633165_052023-O.webp",
           estrellas: [1, 2, 3, 4],
-          nombre: "Producto 3",
-          descripcion: "Descripción del Producto 3",
+          nombre: " PRO Stealth",
+          descripcion: "Incorpora una ligera pero rígida base in-Mould de polímero reforzado con carbono, colocada sobre raíles de acero inoxidable, con un acabado de edición limitada.",
           precio: "$500.000",
         },
         {
