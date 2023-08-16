@@ -1,65 +1,64 @@
 <template>
-  <h1 class="titulo">
-    Tienda virtual de ciclismo <a href="#" class="bx bxs-cart"></a>
-  </h1>
-
-  <div class="container-sm">
-    <header class="header">
-      <div class="logo"></div>
-      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-    </header>
-    <div class="container-sm1">
-      <div class="content1">
-        <h2 class="buscador">¿Qué deseas buscar?</h2>
-        <input
-          type="text"
-          class="input"
-          placeholder="busca cualquer accesorio"
-        />
+  <div>
+    <h1 class="titulo">
+      Tienda virtual de ciclismo <a href="#" class="bx bxs-cart"></a>
+    </h1>
+    <div class="container-sm">
+      <header class="header">
+        <div class="logo" ><h1 class="titulo" Tienda virtual de ciclismo  href="#" ></h1></div>
+      </header>
+      <div class="container-sm1">
+        <div class="content1">
+          <h2 class="buscador">¿Qué deseas buscar?</h2>
+          <input
+            type="text"
+            class="input"
+            placeholder="busca cualquier accesorio"
+          />
+        </div>
+      </div>
+      <div class="container-sm11">
+        <div class="iconos"></div>
       </div>
     </div>
-    <div class="container-sm11">
-      <div class="iconos"></div>
-    </div>
-  </div>
 
-  <div class="contenedor">
-    <h1>Tienda virtual de ciclismo</h1>
-    <div class="box-contaier">
-      <div v-for="(producto, index) in listaProductos" :key="index" class="box">
-        <div class="imagen">
-          <img :src="producto.imagenSrc" alt="" />
-        </div>
-        <div class="content">
-          <div class="strellas">
-            <i
-              class="bx bxs-star"
-              v-for="star in producto.estrellas"
-              :key="star"
-            ></i>
-            <i class="bx bxs-star-half"></i>
+    <div class="contenedor">
+      <h1>Tienda virtual de ciclismo</h1>
+      <div class="box-contaier">
+        <div v-for="(producto, index) in listaProductos" :key="index" class="box">
+          <div class="imagen">
+            <img :src="producto.imagenSrc" alt="" />
           </div>
-          <h3>{{ producto.nombre }}</h3>
-          <p>{{ producto.descripcion }}</p>
-          <span>{{ producto.precio }}</span>
+          <div class="content">
+            <div class="estrellas">
+              <i
+                class="bx bxs-star"
+                v-for="star in producto.estrellas"
+                :key="star"
+              ></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+            <h3>{{ producto.nombre }}</h3>
+            <p>{{ producto.descripcion }}</p>
+            <span>{{ producto.precio }}</span>
+          </div>
+          <a href="#" class="btn-pe" @click="abrirModal(producto)">Agregar</a>
         </div>
-        <a href="#" class="btn-pe" @click="abrirModal(producto)">Agregar</a>
       </div>
-    </div>
-    <div class="modal" v-if="modalActivo">
-      <div class="modal-contenido">
-        <i class="bx bx-check-circle"></i>
-        <p>Producto agregado al carrito</p>
-        <a href="#" class="btn-modal" @click="cerrarModal"
-          >Continuar comprando</a
-        >
-        <a href="" class="btn-pe">Agregar</a>
+      <div class="modal" v-if="modalActivo">
+        <div class="modal-contenido">
+          <i class="bx bx-check-circle"></i>
+          <p>Producto agregado al carrito</p>
+          <a href="#" class="btn-modal" @click="cerrarModal">Continuar comprando</a>
+          <a href="#" class="btn-pe">Agregar</a>
+        </div>
       </div>
     </div>
   </div>
 </template>
-  
-  <script>
+
+<script>
+
 import "boxicons/css/boxicons.min.css";
 export default {
   data() {
@@ -226,23 +225,18 @@ export default {
 }
 
 .bxs-cart {
-  font-size: 40px;
-  color: #ff0000;
-  cursor: pointer;
-  position: fixed; /* Ajusta la posición vertical según tu preferencia */
-  right: 0.5%; /* Ajusta la posición horizontal según tu preferencia */
-  background: #7b7b7b;
-  border-radius: 10%;
-  padding: auto;
+  z-index: 1;
+  position: fixed;
+  background-color: #7b7b7b;
+}
+
+
+.titulo{
+  color: #b80000;
+  position: fixed;
   z-index: 1;
 }
 
-.titulo {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 2rem;
-  color: #b80000;
-}
 .container-sm1::before {
   content: "";
   position: absolute;
@@ -298,7 +292,7 @@ export default {
 h1 {
   font-size: 2.5rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0rem;
   color: #b80000;
 }
 
